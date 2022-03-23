@@ -1,26 +1,48 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="App">
+    <ul class="nav" style="background-color:#DB575E">
+      <li class="nav-item">
+        <router-link class="nav-link font" to="/">Home</router-link>
+      </li>
+      <li class="nav-item">
+        <router-link class="nav-link font" to="/kelas">Kelas</router-link>
+      </li>
+      <li class="nav-item">
+        <router-link class="nav-link font" to="/siswa">Siswa</router-link>
+      </li>
+       <li class="nav-item">
+        <router-link class="nav-link font" to="/Spp">SPP</router-link>
+      </li>
+      <li class="nav-item">
+        <router-link class="nav-link font" to="/contact">Contact</router-link>
+      </li>
+      <li class="nav-item">
+        <router-link class="nav-link font" to="/login">Logout</router-link>
+      </li>
+      
+      
+    </ul>
+
+    <router-view></router-view>
+
+  </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+<style>
+  .font {
+    color: black;
+    font-weight: bold;
+    
   }
+  
+</style>
+
+<script>
+
+export default{
+  name : 'App' ,
+  // components: {
+  //   Home
+  // }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
